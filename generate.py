@@ -19,8 +19,8 @@ def generate_pdf(report_data: Dict, output_path: str = "quality_report.pdf"):
     flow.append(Spacer(1, 12))
     
     # Tech Stack
-    tech_stack = ", ".join(report_data['tech_stack']) if report_data['tech_stack'] else "No specific tech stack detected"
-    tech_text = f"<b>Tech Stack:</b> {tech_stack}"
+    # tech_stack = "".join(report_data['tech_stack'][0][""]) if report_data['tech_stack'] else "No specific tech stack detected"
+    tech_text = f"<b>Tech Stack:</b> {report_data['tech_stack']}"
     flow.append(Paragraph(tech_text, styles['BodyText']))
     flow.append(Spacer(1, 12))
     

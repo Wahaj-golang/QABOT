@@ -1,0 +1,5 @@
+{
+    "dependencies": ["FastAPI","Pydantic","re","ollama"],
+    "functions": {
+        "extract_price_from_model": {
+            "purpose":"Extracts numerical price from AI models response using regular expressions.","inputs": ["message_history_temp"]," outputs": ["price (float)"]},"applyDiscount": {"purpose": "Calculates discounted price based on tier discounts."," inputs": ["user_message", "message_history_temp"]," outputs": ["discounted_price (float)"]},"validation_tool": {"purpose": "Validates if the offered price is within acceptable range.","inputs": ["price", "max_discount"],"outputs": ["valid", "invalid"]}}}
